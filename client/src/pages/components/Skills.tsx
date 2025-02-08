@@ -55,7 +55,19 @@ interface SkillsProps {
 export default function Skills({ preview = false }: SkillsProps) {
   // If preview is true, only show first category with limited skills
   const categories = preview
-    ? [{ ...skillCategories[0], skills: skillCategories[0].skills.slice(0, 6) }]
+    ? [{
+        title: "Frontend Expertise",
+        skills: [
+          { name: "React.js", icon: SiReact, color: "text-cyan-400" },
+          { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
+          { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+          { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
+          { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+          { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-600" },
+          { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
+          { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+        ]
+      }]
     : skillCategories;
 
   return (

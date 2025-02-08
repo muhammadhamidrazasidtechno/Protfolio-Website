@@ -16,6 +16,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
 
+  const getActiveClass = (href: string) =>
+    location === href
+      ? "text-primary font-semibold dark:text-primary-foreground"
+      : "text-muted-foreground hover:text-foreground transition-colors";
+
   return (
     <nav className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -34,9 +39,7 @@ export default function Navbar() {
             <Button
               key={link.href}
               variant="ghost"
-              className={`flex items-center gap-2 ${
-                location === link.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
-              }`}
+              className={`flex items-center gap-2 ${getActiveClass(link.href)}`}
               asChild
             >
               <Link href={link.href}>
@@ -64,9 +67,7 @@ export default function Navbar() {
                 <Button
                   key={link.href}
                   variant="ghost"
-                  className={`flex items-center gap-2 justify-start ${
-                    location === link.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`flex items-center gap-2 justify-start ${getActiveClass(link.href)}`}
                   onClick={() => setIsOpen(false)}
                   asChild
                 >

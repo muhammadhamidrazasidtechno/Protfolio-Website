@@ -1,25 +1,20 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, Home, User, Code, Mail } from "lucide-react";
+import { Menu, Home, User, Code, Mail, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
-  { href: "#about", label: "About", icon: User },
-  { href: "#skills", label: "Skills", icon: Code },
-  { href: "/projects", label: "Projects", isPage: true, icon: Code },
-  { href: "#contact", label: "Contact", icon: Mail },
+  { href: "/about", label: "About", icon: User, isPage: true },
+  { href: "/skills", label: "Skills", icon: Code, isPage: true },
+  { href: "/projects", label: "Projects", icon: Briefcase, isPage: true },
+  { href: "/contact", label: "Contact", icon: Mail, isPage: true },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b">
@@ -40,21 +35,14 @@ export default function Navbar() {
               key={link.href}
               variant="ghost"
               className={`flex items-center gap-2 ${
-                (link.isPage ? location === link.href : false)
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                location === link.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
-              onClick={() => {
-                if (!link.isPage) {
-                  scrollToSection(link.href);
-                }
-              }}
               asChild
             >
-              <a href={link.href}>
+              <Link href={link.href}>
                 <link.icon className="h-4 w-4" />
                 {link.label}
-              </a>
+              </Link>
             </Button>
           ))}
           <ThemeToggle />
@@ -77,22 +65,15 @@ export default function Navbar() {
                   key={link.href}
                   variant="ghost"
                   className={`flex items-center gap-2 justify-start ${
-                    (link.isPage ? location === link.href : false)
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                    location === link.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
                   }`}
-                  onClick={() => {
-                    if (!link.isPage) {
-                      scrollToSection(link.href);
-                    }
-                    setIsOpen(false);
-                  }}
+                  onClick={() => setIsOpen(false)}
                   asChild
                 >
-                  <a href={link.href}>
+                  <Link href={link.href}>
                     <link.icon className="h-4 w-4" />
                     {link.label}
-                  </a>
+                  </Link>
                 </Button>
               ))}
             </div>

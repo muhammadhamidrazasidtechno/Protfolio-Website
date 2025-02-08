@@ -48,25 +48,21 @@ const skillCategories = [
   }
 ];
 
-export default function Skills() {
-  return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Skills & Expertise</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Full-Stack Developer specializing in MERN Stack and modern web technologies
-          </p>
-        </motion.div>
+interface SkillsProps {
+  preview?: boolean;
+}
 
+export default function Skills({ preview = false }: SkillsProps) {
+  // If preview is true, only show first category with limited skills
+  const categories = preview
+    ? [{ ...skillCategories[0], skills: skillCategories[0].skills.slice(0, 6) }]
+    : skillCategories;
+
+  return (
+    <section className="py-20">
+      <div className="container mx-auto px-4">
         <div className="space-y-12">
-          {skillCategories.map((category, categoryIndex) => (
+          {categories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
@@ -97,18 +93,20 @@ export default function Skills() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
-        >
-          <p className="text-muted-foreground">
-            Additional expertise includes UI/UX Design, Responsive Design,
-            User Authentication (JWT, OAuth2.0), and Data Modeling
-          </p>
-        </motion.div>
+        {!preview && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <p className="text-muted-foreground">
+              Additional expertise includes UI/UX Design, Responsive Design,
+              User Authentication (JWT, OAuth2.0), and Data Modeling
+            </p>
+          </motion.div>
+        )}
       </div>
     </section>
   );

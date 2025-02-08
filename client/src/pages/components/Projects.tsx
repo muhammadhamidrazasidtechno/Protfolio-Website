@@ -68,7 +68,7 @@ export default function Projects({ limit }: ProjectsProps) {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        className="px-3 py-1 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-foreground font-medium rounded-full text-sm shadow-sm"
                       >
                         {tech}
                       </span>

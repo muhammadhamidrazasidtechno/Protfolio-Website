@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const links = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
+  { href: "/projects", label: "Projects", isPage: true },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -31,6 +31,13 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className="text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => {
+                if (!link.isPage) {
+                  const element = document.querySelector(link.href);
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }
+                setIsOpen(false);
+              }}
             >
               {link.label}
             </a>
@@ -55,7 +62,13 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className="text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    if (!link.isPage) {
+                      const element = document.querySelector(link.href);
+                      element?.scrollIntoView({ behavior: "smooth" });
+                    }
+                    setIsOpen(false);
+                  }}
                 >
                   {link.label}
                 </a>

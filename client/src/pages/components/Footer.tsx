@@ -9,7 +9,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-2">Let's Connect</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/your-github"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -17,7 +17,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/in/your-linkedin"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Muhammad Hamid Raza. All rights reserved.
             </p>
           </div>
         </div>

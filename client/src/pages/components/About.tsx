@@ -14,9 +14,10 @@ export default function About() {
         >
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            With over 5 years of experience in web development, I specialize in
-            creating modern and efficient web applications using cutting-edge
-            technologies.
+            A passionate Full-Stack Web Developer with over a year of experience in
+            building intuitive, responsive, and feature-rich web applications.
+            Graduate of Saylani Mass IT Training with expertise in MERN Stack
+            development.
           </p>
         </motion.div>
 
@@ -30,11 +31,13 @@ export default function About() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Experience</h3>
-                <p className="text-muted-foreground">
-                  I've worked with various companies and clients, delivering
-                  high-quality solutions that drive business growth and user
-                  engagement.
-                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>✦ MERN Stack Development</li>
+                  <li>✦ Real-Time Apps with Socket.io</li>
+                  <li>✦ UI/UX Design Best Practices</li>
+                  <li>✦ Database Design & Management</li>
+                  <li>✦ API Integration & Development</li>
+                </ul>
               </CardContent>
             </Card>
           </motion.div>
@@ -47,11 +50,14 @@ export default function About() {
           >
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Education</h3>
-                <p className="text-muted-foreground">
-                  Bachelor's in Computer Science with a focus on web technologies
-                  and software engineering principles.
-                </p>
+                <h3 className="text-xl font-semibold mb-4">Education & Training</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>✦ Saylani Mass IT Training Graduate</li>
+                  <li>✦ Advanced Web Development</li>
+                  <li>✦ Modern JavaScript (ES6+)</li>
+                  <li>✦ React & Node.js Specialization</li>
+                  <li>✦ Database Management Systems</li>
+                </ul>
               </CardContent>
             </Card>
           </motion.div>

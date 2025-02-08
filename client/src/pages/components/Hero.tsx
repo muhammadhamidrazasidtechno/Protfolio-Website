@@ -12,10 +12,11 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-primary">John Doe</span>
+            Hi, I'm <span className="text-primary">Muhammad Hamid Raza</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            A passionate full-stack developer crafting beautiful web experiences
+            A passionate Full-Stack Developer with expertise in MERN Stack and modern web technologies. 
+            Saylani Mass IT Training Graduate with over a year of experience.
           </p>
           <Button asChild size="lg">
             <a href="#contact">

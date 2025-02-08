@@ -80,10 +80,12 @@ export default function Skills({ preview = false }: SkillsProps) {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="hover:shadow-lg transition-shadow">
+                    <Card className="hover:shadow-lg transition-shadow bg-background dark:bg-background">
                       <CardContent className="p-6 flex flex-col items-center">
                         <skill.icon className={`w-12 h-12 ${skill.color} mb-4`} />
-                        <h4 className="font-medium text-center">{skill.name}</h4>
+                        <h4 className="font-medium text-center text-foreground dark:text-foreground">
+                          {skill.name}
+                        </h4>
                       </CardContent>
                     </Card>
                   </motion.div>

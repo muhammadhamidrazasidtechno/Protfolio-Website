@@ -16,13 +16,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-foreground">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-primary to-primary/80 text-transparent bg-clip-text dark:from-primary-foreground dark:to-primary-foreground/80">
               Muhammad Hamid Raza
             </span>
           </h1>
-          <p className="text-xl text-foreground/80 dark:text-foreground/90 mb-8">
+          <p className="text-lg sm:text-xl text-foreground/80 dark:text-foreground/90 mb-8">
             A passionate Full-Stack Developer with expertise in MERN Stack and
             modern web technologies. Saylani Mass IT Training Graduate with over
             a year of experience.

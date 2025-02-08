@@ -8,6 +8,9 @@ import ProjectsPage from "@/pages/Projects";
 import SkillsPage from "@/pages/Skills";
 import ContactPage from "@/pages/Contact";
 import AboutPage from "@/pages/About";
+import AdminLogin from "@/pages/admin/Login";
+import AdminDashboard from "@/pages/admin/Dashboard";
+import CV from "./pages/CV"; // Added import for CV component
 
 function Router() {
   return (
@@ -17,6 +20,9 @@ function Router() {
       <Route path="/skills" component={SkillsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/admin" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
+      <Route path="/cv" component={CV} /> {/* Added route for CV */}
       <Route component={NotFound} />
     </Switch>
   );

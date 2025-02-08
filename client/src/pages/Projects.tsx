@@ -29,7 +29,8 @@ const projects = [
   },
   {
     title: "Fitness Tracking App",
-    description: "Mobile-first fitness tracking application with user authentication",
+    description:
+      "Mobile-first fitness tracking application with user authentication",
     image: "https://images.unsplash.com/photo-1660592868727-858d28c3ba52",
     link: "#",
     technologies: ["React", "Firebase", "Material-UI", "Chart.js"],
@@ -50,7 +51,8 @@ export default function ProjectsPage() {
           >
             <h1 className="text-4xl font-bold mb-4">My Projects</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my work, featuring web applications built with modern technologies
+              A showcase of my work, featuring web applications built with
+              modern technologies
             </p>
           </motion.div>
 
@@ -69,7 +71,9 @@ export default function ProjectsPage() {
                     className="w-full h-48 object-cover"
                   />
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {project.title}
+                    </h3>
                     <p className="text-muted-foreground mb-4">
                       {project.description}
                     </p>
@@ -77,14 +81,18 @@ export default function ProjectsPage() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                          className="px-3 py-1 bg-primary/20 dark:bg-primary/50 text-primary dark:text-white font-medium rounded-full text-sm shadow-sm hover:bg-primary/30 dark:hover:bg-primary/60 transition-colors"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
                     <Button variant="outline" asChild>
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         View Project <ExternalLink className="ml-2 h-4 w-4" />
                       </a>
                     </Button>

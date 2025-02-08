@@ -3,8 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 bg-primary/5" />
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_40%,rgba(0,0,0,0.02)_40%,rgba(0,0,0,0.02)_60%,transparent_60%)] bg-[length:20px_20px]" />
+
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +32,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card>
+            <Card className="backdrop-blur-sm bg-background/95">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Experience</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -48,7 +52,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card>
+            <Card className="backdrop-blur-sm bg-background/95">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Education & Training</h3>
                 <ul className="space-y-2 text-muted-foreground">

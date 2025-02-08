@@ -18,7 +18,7 @@ export default function About() {
         >
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            A passionate Full-Stack Web Developer with over a year of experience in
+            A passionate Full-Stack Web Developer with over 2 years of experience in
             building intuitive, responsive, and feature-rich web applications.
             Graduate of Saylani Mass IT Training with expertise in MERN Stack
             development.
@@ -34,13 +34,27 @@ export default function About() {
           >
             <Card className="backdrop-blur-sm bg-background/95">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Experience</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>✦ MERN Stack Development</li>
-                  <li>✦ Real-Time Apps with Socket.io</li>
-                  <li>✦ UI/UX Design Best Practices</li>
-                  <li>✦ Database Design & Management</li>
-                  <li>✦ API Integration & Development</li>
+                <h3 className="text-xl font-semibold mb-4">Professional Experience</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="border-l-2 border-primary/20 pl-4">
+                    <h4 className="font-medium text-foreground">SID Techno</h4>
+                    <p className="text-sm">Full Stack Developer • 2 Years</p>
+                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm">
+                      <li>✦ Led MERN Stack Development Projects</li>
+                      <li>✦ Implemented Real-Time Applications</li>
+                      <li>✦ Optimized Database Performance</li>
+                      <li>✦ Developed Responsive UI/UX Solutions</li>
+                    </ul>
+                  </li>
+                  <li className="border-l-2 border-primary/20 pl-4">
+                    <h4 className="font-medium text-foreground">Freelance Projects</h4>
+                    <p className="text-sm">Full Stack Developer</p>
+                    <ul className="mt-2 space-y-1 list-disc list-inside text-sm">
+                      <li>✦ Custom Web Applications</li>
+                      <li>✦ API Integration & Development</li>
+                      <li>✦ Database Design & Management</li>
+                    </ul>
+                  </li>
                 </ul>
               </CardContent>
             </Card>

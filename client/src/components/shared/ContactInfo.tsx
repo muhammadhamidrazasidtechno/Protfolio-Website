@@ -29,10 +29,10 @@ const contactItems = [
   {
     icon: "fas fa-globe",
     title: "Website",
-    value: "www.muhammad-ibrahim.com",
+    value: "https://muhammad-hamid-raza.vercel.app/",
     color: "primary",
     delay: 0.4,
-    link: "https://www.muhammad-ibrahim.com",
+    link: "https://muhammad-hamid-raza.vercel.app/",
   },
 ];
 

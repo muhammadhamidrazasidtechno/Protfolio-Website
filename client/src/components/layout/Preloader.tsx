@@ -19,19 +19,19 @@ const Preloader = () => {
           <div className="absolute inset-0 bg-primary opacity-20 blur-xl"></div>
         </motion.div>
 
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "22ch" }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-          className="overflow-hidden font-mono text-lg text-secondary border-r-2 border-secondary"
-        >
-          Building Professional Website
-        </motion.div>
+        <div className="w-64 h-2 bg-secondary/20 rounded-full overflow-hidden mt-2">
+          <motion.div
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+            className="h-full bg-primary"
+          />
+        </div>
       </div>
     </div>
   );

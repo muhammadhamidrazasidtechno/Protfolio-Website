@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link href="/">
             <a className="text-2xl font-bold font-space text-primary hover:text-secondary transition-colors duration-300">
-              Muhammad<span className="text-white">Hamid Raza</span>
+              Muhammad <span className="text-white">Hamid Raza</span>
             </a>
           </Link>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="hidden lg:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
-                <a 
+                <a
                   className={cn(
                     "nav-link text-lightText hover:text-primary transition-colors duration-300",
                     { "text-primary": location === link.path }

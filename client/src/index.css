@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 211 100% 99%;
+    --secondary: 165 80% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 12 90% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 207 90% 54%;
+    --chart-2: 165 80% 60%;
+    --chart-3: 12 90% 50%;
+    --chart-4: 274 80% 60%;
+    --chart-5: 50 80% 60%;
+    --radius: 0.5rem;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 207 90% 54%;
+    --sidebar-primary-foreground: 211 100% 99%;
+    --sidebar-accent: 165 80% 60%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+}
+
+/* Custom colors for the portfolio */
+:root {
+  --color-primary: #6C63FF;
+  --color-secondary: #00FFFF;
+  --color-accent: #FF3D00;
+  --color-dark-bg: #0A0A14;
+  --color-dark-bg2: #111122;
+  --color-light-text: #F0F0F0;
+  --color-secondary-text: #AAAADD;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-darkBg text-foreground;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(17, 17, 34, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Neon shadow effects */
+.shadow-neon {
+  box-shadow: 0 0 5px #6C63FF, 0 0 20px #6C63FF;
+}
+
+.shadow-neon-cyan {
+  box-shadow: 0 0 5px #00FFFF, 0 0 20px #00FFFF;
+}
+
+.shadow-neon-orange {
+  box-shadow: 0 0 5px #FF3D00, 0 0 20px #FF3D00;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Typing animation */
+.typing {
+  width: 22ch;
+  animation: typing 3.5s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--color-primary);
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Floating animation */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* CV section styles for PDF generation */
+#cv-section.generating-pdf {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  z-index: -9999;
+  background-color: var(--color-dark-bg);
+}
+
+/* Background gradient for sections */
+.bg-gradient-dark {
+  background: linear-gradient(to bottom, var(--color-dark-bg), var(--color-dark-bg2));
+}
+
+/* Custom text gradient */
+.text-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Box shadow for cards */
+.card-shadow {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Custom classes for color theme */
+.bg-darkBg {
+  background-color: var(--color-dark-bg);
+}
+
+.bg-darkBg2 {
+  background-color: var(--color-dark-bg2);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-lightText {
+  color: var(--color-light-text);
+}
+
+.text-secondaryText {
+  color: var(--color-secondary-text);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}

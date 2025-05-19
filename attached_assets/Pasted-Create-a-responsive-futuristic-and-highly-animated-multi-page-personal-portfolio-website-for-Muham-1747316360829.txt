@@ -1,0 +1,153 @@
+Create a responsive, futuristic, and highly-animated multi-page personal portfolio website for Muhammad Ibrahim, a MERN Stack Front-End Developer.
+
+Use Next.js + Tailwind CSS for structure and styling, with Framer Motion, GSAP, and Three.js/Spline for animations and 3D effects. SEO, performance, and accessibility must be considered.
+
+🌐 Pages & Routing:
+/ → Home (Summary of all sections)
+
+/about → Detailed bio, image, values
+
+/skills → Categorized tech stack with icons & animations
+
+/projects → Project showcase (grid or carousel)
+
+/experience → Timeline of work history
+
+/education → Education timeline/cards
+
+/contact → Contact form, info, socials
+
+Each section must exist independently and also be previewed on the home page.
+
+🔧 Technical Stack:
+Frontend: Next.js (App Router), React
+
+Styling: Tailwind CSS + Custom animations (SVG, Canvas)
+
+Animations: Framer Motion, GSAP, Three.js, Spline
+
+PDF Export: jsPDF + html2canvas for dynamic CV download
+
+SEO: next/head, semantic HTML, meta tags, OpenGraph, Twitter Cards
+
+Extras: Custom hooks, reusable components, accessibility tags (aria, roles)
+
+🧩 Components & Features:
+🧍 Hero Section:
+3D animated background (particles / code snippets / Spline model)
+
+Dynamic text typing: “Hi, I'm Muhammad Ibrahim — Front-End Developer”
+
+CTA buttons: View Projects, Download CV, Contact Me
+
+👨‍💻 About Section:
+Smooth scroll animations (Framer Motion or GSAP)
+
+Profile image in 3D rotating frame or hologram style
+
+Short paragraph from CV’s “About Me”
+
+Interactive cards showing personal values/goals
+
+🛠️ Skills Section:
+3D rotating skill spheres or floating tech tags (Three.js/Spline)
+
+Categorized:
+
+Frontend: React.js, Next.js, Tailwind CSS, Bootstrap
+
+Backend: Node.js, Express.js
+
+Tools: Git, GitHub, MongoDB, Firebase
+
+Animated logos/icons with hover effects
+
+💼 Projects Section:
+Responsive grid or carousel
+
+Each card has:
+
+Flip or 3D tilt animation
+
+Title, description, tech stack
+
+Links to live demo and GitHub
+
+Tag for featured projects with spotlight effect
+
+🏢 Experience Timeline:
+Animated vertical timeline
+
+Each entry slides in with:
+
+Company (e.g., SID Techno)
+
+Role
+
+Bullet points
+
+Company logos/icons
+
+🎓 Education Section:
+Timeline or stacked cards
+
+Hover animations showing:
+
+IQRA University
+
+Saylani Mass IT Training
+
+Nusrat Bhutto College
+
+📞 Contact Section:
+Floating 3D map pin or animated location dot
+
+Contact form with floating inputs + validation
+
+Personal details: phone, email, location, portfolio
+
+Social icons with neon glow on hover
+
+📄 Download CV:
+Sticky button with animated download effect
+
+Uses html2canvas + jsPDF to export CV section to PDF
+
+✨ Global Visual Theme:
+Dark Mode first (Glassmorphism, Neon, Developer aesthetic)
+
+Animated backgrounds:
+
+Particle.js
+
+3D low-poly terrain
+
+Gradient blur effects
+
+Custom cursor
+
+Smooth scroll
+
+Page transitions (Framer Motion)
+
+Preloader with animated initials: MI
+
+🔍 SEO & Accessibility:
+Use semantic HTML tags (<header>, <main>, <section>)
+
+Add meta tags, OpenGraph, and structured data via next/head
+
+Mobile-first, responsive design
+
+Aria labels, alt tags, keyboard navigation
+
+Fast loading: lazy load images, optimize animations, compress assets
+
+💡 Bonus Ideas:
+Light/Dark toggle with animated transition
+
+Easter egg (e.g., console-style hacker mode)
+
+Animated scroll indicator or timeline tracker
+
+Analytics integration (optional)

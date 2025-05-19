@@ -1,0 +1,696 @@
+Create a responsive, futuristic, and highly animated multi-page personal portfolio website for Muhammad Hamid Raza, a MERN Stack Developer, using the details from his CV (provided below). The website must reflect his skills, experience, education, and contact information, with all content and design tailored to his CV. Additionally, integrate a floating AI chat widget trained on the CV details to answer questions about his skills, experience, education, and contact information accurately and conversationally. Ensure the AI retains and recalls CV data without inventing information.
+
+
+
+CV Data for Website and AI Training
+
+Name: Muhammad Hamid Raza
+Role: MERN Stack Developer
+Contact:
+
+
+
+
+
+Phone: +92-316-0010801
+
+
+
+Email: muhammadhamidr92@gmail.com
+
+
+
+GitHub: https://github.com/muhammadhamidraza
+
+
+
+LinkedIn: https://linkedin.com/in/hamid-raza-b249162a8
+
+
+
+Location: Kharadar, Karachi, Pakistan
+
+About Me:
+I am a proficient MERN stack developer with a strong passion for building innovative and scalable web applications. Skilled in MongoDB, Express.js, React.js, and Node.js, I specialize in developing dynamic user interfaces and implementing robust back-end solutions. With a meticulous approach to clean and efficient code, I thrive on solving complex technical challenges. Constantly staying ahead of industry trends, I am committed to delivering high-quality digital experiences and contributing to the success of forward-thinking projects.
+
+Skills:
+
+
+
+
+
+MongoDB
+
+
+
+Express.js
+
+
+
+React.js
+
+
+
+Amazon Web Services (AWS)
+
+
+
+Node.js
+
+
+
+Next.js
+
+
+
+Stripe
+
+
+
+RESTful APIs
+
+
+
+Responsive Web Design
+
+
+
+Firebase
+
+
+
+Advanced JavaScript
+
+
+
+Socket.io (Front-End and Back-End)
+
+Experience:
+
+
+
+
+
+Sid Techno (MERN Stack Developer, 2024–Present):
+
+
+
+
+
+Designed, developed, and maintained dynamic web applications using MongoDB, Express.js, React.js, and Node.js.
+
+
+
+Built RESTful APIs and developed interactive front-end components for seamless integration.
+
+
+
+Implemented Firebase Realtime Database for real-time data synchronization.
+
+
+
+Integrated Firebase Push Notifications for mobile user engagement.
+
+
+
+Designed and built a full-fledged live chat web app with Socket.io, handling both front-end and back-end development.
+
+
+
+Utilized AWS S3 for efficient image storage and management.
+
+
+
+Implemented Google Sign-In authentication using Next.js.
+
+
+
+Integrated Google Maps services for enhanced location-based functionalities.
+
+
+
+Developed fully responsive websites for seamless user experiences across devices.
+
+
+
+Collaborated with cross-functional teams to enhance system performance and usability.
+
+
+
+Committed to writing clean, maintainable code and staying updated with emerging technologies.
+
+
+
+Sid Techno (MERN Stack Internship, Dec 2023–Feb 2024):
+
+
+
+
+
+Worked on diverse projects, gaining hands-on experience in front-end and back-end development.
+
+
+
+Contributed to building responsive, user-friendly web applications using JavaScript, HTML, CSS, and modern frameworks.
+
+
+
+Gained practical experience in Node.js for back-end development and server-side technologies.
+
+
+
+Explored Angular to enhance front-end skills.
+
+
+
+Focused on optimizing fully responsive websites for seamless user experiences.
+
+
+
+Strengthened expertise in database management and web development through collaborative teamwork.
+
+Education:
+
+
+
+
+
+Graduation: Government College of Commerce & Economics (In Progress)
+
+
+
+Intermediate: Government College of Commerce & Economics (2022–2024)
+
+
+
+Matriculation: Raza Foundation School (2021–2022)
+
+
+
+General Website Requirements
+
+
+
+
+
+Framework & Styling: Use Next.js (App Router) with Tailwind CSS for structure and styling. Incorporate Framer Motion, GSAP, and Three.js/Spline for animations and 3D effects.
+
+
+
+SEO & Accessibility: Use semantic HTML, meta tags, OpenGraph, Twitter Cards, aria labels, alt tags, and keyboard navigation. Optimize for performance with lazy-loaded images, compressed assets, and efficient animations.
+
+
+
+Visual Theme: Dark mode with glassmorphism, neon accents, and a developer aesthetic. Include animated backgrounds (Particle.js, 3D low-poly terrain, or gradient blur), custom cursor, smooth scroll, page transitions, and a preloader with animated initials "HR".
+
+
+
+Responsiveness: Mobile-first design, fully responsive across all devices.
+
+
+
+PDF Export: Include a sticky "Download CV" button using jsPDF + html2canvas to export the CV section as a PDF with an animated download effect.
+
+
+
+Bonus Features: Add a light/dark mode toggle, an animated scroll indicator, and an optional easter egg (e.g., console-style hacker mode).
+
+
+
+Pages & Routing
+
+Create the following pages, each reflecting CV details and previewed on the home page:
+
+
+
+
+
+/ (Home): Summary of all sections with a hero banner and CTAs.
+
+
+
+/about: Detailed bio, profile image, and personal values.
+
+
+
+/skills: Categorized tech stack with animated icons.
+
+
+
+/projects: Showcase of projects in a grid or carousel.
+
+
+
+/experience: Timeline of work history.
+
+
+
+/education: Education timeline or cards.
+
+
+
+/contact: Contact form, personal details, and social links.
+
+
+
+Page Details (Aligned with CV)
+
+
+
+
+
+Hero Section (Home):
+
+
+
+
+
+3D animated background (particles, code snippets, or Spline model).
+
+
+
+Dynamic typing text: “Hi, I'm Muhammad Hamid Raza — MERN Stack Developer”.
+
+
+
+CTA buttons: View Projects, Download CV, Contact Me.
+
+
+
+Use Framer Motion for entrance animations.
+
+
+
+About Section:
+
+
+
+
+
+Use CV’s “About Me” text: “I am a proficient MERN stack developer with a strong passion for building innovative and scalable web applications...”.
+
+
+
+Display a profile image in a 3D rotating frame or hologram style.
+
+
+
+Interactive cards for values (e.g., innovation, efficiency, collaboration) with GSAP hover effects.
+
+
+
+Smooth scroll animations for bio text.
+
+
+
+Skills Section:
+
+
+
+
+
+Display CV skills: MongoDB, Express.js, React.js, AWS, Node.js, Next.js, Stripe, RESTful APIs, Responsive Web Design, Firebase, Advanced JavaScript, Socket.io.
+
+
+
+Use 3D rotating skill spheres or floating tech tags (Three.js/Spline).
+
+
+
+Categorize into:
+
+
+
+
+
+Frontend: React.js, Next.js, Responsive Web Design, HTML, CSS.
+
+
+
+Backend: Node.js, Express.js, MongoDB, RESTful APIs.
+
+
+
+Tools & Services: AWS, Firebase, Stripe, Socket.io, Git.
+
+
+
+Add animated logos/icons with hover effects.
+
+
+
+Projects Section:
+
+
+
+
+
+Responsive grid or carousel with flip or 3D tilt animations.
+
+
+
+Each project card includes:
+
+
+
+
+
+Title, description, tech stack (e.g., MongoDB, Express.js, React.js, Node.js).
+
+
+
+Links to live demo and GitHub.
+
+
+
+Spotlight effect for featured projects.
+
+
+
+Example projects (based on CV expertise):
+
+
+
+
+
+Live chat web app with Socket.io and Firebase.
+
+
+
+E-commerce platform with Stripe integration and Next.js.
+
+
+
+Location-based app with Google Maps and AWS S3.
+
+
+
+Experience Timeline:
+
+
+
+
+
+Animated vertical timeline with slide-in entries for:
+
+
+
+
+
+Sid Techno (MERN Stack Developer, 2024–Present): Developed web apps, built APIs, integrated Firebase, Socket.io, AWS S3, Google Sign-In, and Google Maps.
+
+
+
+Sid Techno (MERN Stack Internship, Dec 2023–Feb 2024): Built responsive apps, worked with Node.js, explored Angular, and optimized user experiences.
+
+
+
+Include company logos/icons and bullet points from CV.
+
+
+
+Education Section:
+
+
+
+
+
+Timeline or stacked cards with hover animations for:
+
+
+
+
+
+Government College of Commerce & Economics (Graduation, In Progress).
+
+
+
+Government College of Commerce & Economics (Intermediate, 2022–2024).
+
+
+
+Raza Foundation School (Matriculation, 2021–2022).
+
+
+
+Add subtle GSAP animations for card reveals.
+
+
+
+Contact Section:
+
+
+
+
+
+Floating 3D map pin or animated location dot for Kharadar, Karachi.
+
+
+
+Contact form with floating inputs, validation, and Framer Motion animations.
+
+
+
+Display CV details: +92-316-0010801, muhammadhamidr92@gmail.com, GitHub (muhammadhamidraza), LinkedIn (hamid-raza-b249162a8).
+
+
+
+Social icons with neon glow on hover.
+
+
+
+AI Chat Widget (Trained on CV)
+
+Add a floating chat widget in the bottom-right corner, integrated with an AI model (preferably Gemini Free or another available LLM) trained on Muhammad Hamid Raza’s CV to answer questions about his skills, experience, education, and contact information.
+
+Widget Requirements
+
+
+
+
+
+Appearance:
+
+
+
+
+
+Fixed chat icon (e.g., neon speech bubble) at bottom-right, always visible.
+
+
+
+On click, open a chat window with:
+
+
+
+
+
+Scrollable conversation area.
+
+
+
+Message input field and send button (no name/email fields).
+
+
+
+Close button (×) with smooth animation.
+
+
+
+Use Tailwind CSS for styling and Framer Motion for open/close animations.
+
+
+
+Ensure responsiveness for mobile and desktop.
+
+
+
+Functionality:
+
+
+
+
+
+Train the AI with the CV data to retain and recall details such as:
+
+
+
+
+
+Skills: MongoDB, Express.js, React.js, Node.js, etc.
+
+
+
+Experience: Sid Techno roles, responsibilities, and achievements.
+
+
+
+Education: Government College of Commerce & Economics, Raza Foundation School.
+
+
+
+Contact: Phone, email, GitHub, LinkedIn, location.
+
+
+
+About Me: Passion for innovative, scalable web applications.
+
+
+
+When users ask questions (e.g., “What are Hamid’s skills?”, “Tell me about his experience at Sid Techno”), the AI responds conversationally, pulling accurate details from the CV.
+
+
+
+Maintain session-based message history (messages persist during the session).
+
+
+
+Show a typing animation or loader while the AI processes the response.
+
+
+
+Technical Implementation:
+
+
+
+
+
+Frontend: Build the chat widget as a reusable Next.js component using Tailwind CSS and Framer Motion.
+
+
+
+Backend: Create a secure API endpoint (e.g., /api/chat) in Next.js to handle AI requests. Store the API key in a .env file for security.
+
+
+
+AI Integration: Use Gemini Free (or fallback to another LLM like OpenAI GPT if unavailable). Pass the CV data as context during initialization to “train” it for responses.
+
+
+
+Training Approach:
+
+
+
+
+
+Preload the CV text into the AI’s context or prompt at startup.
+
+
+
+Structure the prompt to instruct the AI to act as a knowledgeable assistant about Muhammad Hamid Raza, answering only based on CV details.
+
+
+
+Example AI instruction: “You are an AI assistant trained on Muhammad Hamid Raza’s CV: [Insert CV data]. Answer all questions accurately based on his skills, experience, education, and contact details. Respond conversationally and professionally. If a question is unrelated, say: ‘I’m here to share details about Muhammad Hamid Raza’s skills and experience. Ask me about his CV!’”
+
+
+
+Storage: Use sessionStorage for chat history. Optionally, integrate Firebase Firestore for persistent storage, leveraging CV’s Firebase expertise.
+
+
+
+Error Handling: For API errors (e.g., 404 or rate limits), display: “Oops, I’m having trouble connecting. Try again later!”
+
+
+
+Technical Stack
+
+
+
+
+
+Frontend: Next.js (App Router), React, Tailwind CSS.
+
+
+
+Animations: Framer Motion, GSAP, Three.js, Spline, Particle.js.
+
+
+
+Backend: Next.js API routes, Node.js for processing.
+
+
+
+AI: Gemini Free (preferred) or another LLM, with CV data as context.
+
+
+
+PDF Export: jsPDF + html2canvas.
+
+
+
+Storage: SessionStorage for chat history, optional Firebase Firestore.
+
+
+
+Tools: Git for version control, Vercel for deployment.
+
+
+
+Deliverables
+
+
+
+
+
+Complete Next.js project with all pages, components, and animations tailored to Muhammad Hamid Raza’s CV.
+
+
+
+Fully functional AI chat widget integrated across all pages, trained on CV details.
+
+
+
+Secure /api/chat endpoint with environment variables for API keys.
+
+
+
+Documentation for running locally (e.g., npm install, npm run dev) and deploying to Vercel.
+
+
+
+Instructions for updating CV data in the AI’s context if needed.
+
+
+
+Notes
+
+
+
+
+
+Ensure all website content (text, projects, skills, etc.) is derived from the CV to maintain consistency.
+
+
+
+Test the AI with sample questions like:
+
+
+
+
+
+“What does Muhammad Hamid Raza do?”
+
+
+
+“Tell me about his work at Sid Techno.”
+
+
+
+“What are his skills?”
+
+
+
+“Where did he study?”
+
+
+
+Align the chat widget’s design with the portfolio’s neon, futuristic aesthetic.
+
+
+
+Leverage CV skills (e.g., Firebase, Socket.io, AWS) in the implementation, such as using Firebase for chat persistence or Socket.io for real-time updates.
+
+
+
+If Gemini Free is unavailable, use a fallback LLM and document setup differences.

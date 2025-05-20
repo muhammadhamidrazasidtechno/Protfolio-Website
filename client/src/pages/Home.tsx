@@ -10,22 +10,25 @@ import { pageVariants } from "@/lib/framer-animations";
 
 const Home = () => {
   return (
-    <motion.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-    >
-      <main id="cv-section">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
-    </motion.div>
+    <div style={{ overflowX: 'hidden' }}>
+      <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+      >
+        <main id="cv-section">
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ExperienceSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
+      </motion.div>
+    </div>
+
   );
 };
 

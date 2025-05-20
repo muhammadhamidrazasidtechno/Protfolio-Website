@@ -39,28 +39,22 @@ const contactItems = [
 const socialLinks = [
   {
     icon: "fab fa-github",
-    url: "https://github.com",
+    url: "https://github.com/muhammadhamidraza",
     color: "primary",
     hoverColor: "primary",
     delay: 0.1,
   },
   {
     icon: "fab fa-linkedin-in",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/hamid-raza-b249162a8/",
     color: "secondary",
     hoverColor: "secondary",
     delay: 0.2,
   },
-  {
-    icon: "fab fa-twitter",
-    url: "https://twitter.com",
-    color: "accent",
-    hoverColor: "accent",
-    delay: 0.3,
-  },
+
   {
     icon: "fab fa-dribbble",
-    url: "https://dribbble.com",
+    url: "https://muhammad-hamid-raza.vercel.app/",
     color: "pink-500",
     hoverColor: "pink-500",
     delay: 0.4,

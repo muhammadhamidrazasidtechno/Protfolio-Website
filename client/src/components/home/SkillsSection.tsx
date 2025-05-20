@@ -29,13 +29,13 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-darkBg2 relative">
       <div className="container mx-auto px-4 md:px-8">
-        <SectionHeading 
-          title="My Skills" 
+        <SectionHeading
+          title="My Skills"
           subtitle="Technologies and tools I work with to bring ideas to life."
           lightBackground={false}
         />
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           whileInView="visible"
@@ -49,8 +49,8 @@ const SkillsSection = () => {
               variants={fadeIn("up", index * 0.1)}
             >
               <div className="flex items-center mb-6">
-                <motion.div 
-                  className={`w-12 h-12 flex items-center justify-center rounded-full bg-${category.color} bg-opacity-20 text-${category.color} text-2xl mr-4 group-hover:scale-110 transition-transform duration-300`}
+                <motion.div
+                  className={`w-12 h-12 flex items-center justify-center rounded-full bg-${category.color} bg-opacity-20 text-black text-2xl mr-4 group-hover:scale-110 transition-transform duration-300`}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
@@ -58,10 +58,10 @@ const SkillsSection = () => {
                 </motion.div>
                 <h3 className="text-xl font-bold font-space">{category.title}</h3>
               </div>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, idx) => (
-                  <SkillBar 
+                  <SkillBar
                     key={idx}
                     name={skill.name}
                     percentage={skill.percentage}
@@ -73,9 +73,9 @@ const SkillsSection = () => {
             </motion.div>
           ))}
         </motion.div>
-        
+
         {/* Tech Tags Cloud */}
-        <motion.div 
+        <motion.div
           className="mt-16 flex flex-wrap justify-center gap-3"
           initial="hidden"
           whileInView="visible"

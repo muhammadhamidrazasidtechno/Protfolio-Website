@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/shared/SectionHeading";
 import { fadeIn, staggerContainer } from "@/lib/framer-animations";
-
+import BgImage from "../../../../attached_assets/bgImg.jpg";
 const valueItems = [
   {
     icon: "fas fa-lightbulb",
@@ -49,7 +49,7 @@ const AboutSection = () => {
           >
             <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden relative group">
               <img
-                src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src={BgImage}
                 alt="Muhammad Hamid Raza working"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

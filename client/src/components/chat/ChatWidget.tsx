@@ -63,7 +63,7 @@ const ChatWidget = () => {
       const history = state.messages.map(({ role, content }) => ({ role, content }));
 
       // Call the chat API
-      const response = await apiRequest<{ response: string }>("https://portfoliobackend-9tgn.onrender.com/api/chat?user=hamid", {
+      const response = await apiRequest<{ response: string }>("https://protfolio-website-backend.vercel.app/api/chat", {
         method: "POST",
         body: JSON.stringify({
           message: userMessage.content,

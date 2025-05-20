@@ -62,7 +62,7 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
     try {
-      const res = await fetch("https://portfoliobackend-9tgn.onrender.com/api/contact?user=hamid", {
+      const res = await fetch("https://protfolio-website-backend.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

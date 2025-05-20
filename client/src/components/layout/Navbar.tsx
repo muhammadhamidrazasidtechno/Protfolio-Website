@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { downloadCV } from "@/lib/generate-pdf";
+import { Download } from "lucide-react";
+import Cv from "../../../../attached_assets/cv.pdf";
 
 const Navbar = () => {
   const [location] = useLocation();
@@ -24,6 +25,16 @@ const Navbar = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  // Function to handle CV download
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = Cv;
+    link.download = "Muhammad_Hamid_Raza_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const navLinks = [
@@ -63,7 +74,7 @@ const Navbar = () => {
             className="lg:hidden text-white focus:outline-none"
             aria-label="Toggle menu"
           >
-            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+            <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-xl`}></i>
           </button>
 
           {/* Desktop Navigation */}
@@ -80,15 +91,14 @@ const Navbar = () => {
                 </a>
               </Link>
             ))}
-
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={downloadCV}
-              className="bg-primary hover:bg-opacity-80 px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2"
+              className="bg-primary hover:bg-opacity-80聓80 px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2"
             >
+              <Download className="h-4 w-4" />
               <span>Download CV</span>
-              <i className="fas fa-download"></i>
             </motion.button>
           </div>
         </div>
@@ -118,7 +128,6 @@ const Navbar = () => {
                   </a>
                 </Link>
               ))}
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -128,8 +137,8 @@ const Navbar = () => {
                 }}
                 className="bg-primary hover:bg-opacity-80 px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2"
               >
+                <Download className="h-4 w-4" />
                 <span>Download CV</span>
-                <i className="fas fa-download"></i>
               </motion.button>
             </div>
           )}

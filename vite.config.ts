@@ -10,7 +10,7 @@ export default defineConfig(async () => {
     process.env.REPL_ID !== undefined
   ) {
     const { cartographer } = await import("@replit/vite-plugin-cartographer");
-    plugins.push(cartographer());
+    plugins.push(cartographer()); // push a single plugin, not an array
   }
 
   return {
@@ -20,7 +20,7 @@ export default defineConfig(async () => {
         overlay: false,
       },
     },
-    plugins,
+    plugins, // plugins is a flat array here ✅
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "client", "src"),
@@ -32,6 +32,6 @@ export default defineConfig(async () => {
       outDir: path.resolve(__dirname, "dist/public"),
       emptyOutDir: true,
     },
-    base: "/", // This ensures routing works on Vercel for all paths like /about
+    base: "/", // essential for proper routing on Vercel
   };
 });

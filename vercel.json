@@ -1,3 +1,32 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/about",
+      "dest": "/"
+    },
+    {
+      "src": "/skills",
+      "dest": "/"
+    },
+    {
+      "src": "/projects",
+      "dest": "/"
+    },
+    {
+      "src": "/experience",
+      "dest": "/"
+    },
+    {
+      "src": "/education",
+      "dest": "/"
+    },
+    {
+      "src": "/contact",
+      "dest": "/"
+    }
+  ]
 }

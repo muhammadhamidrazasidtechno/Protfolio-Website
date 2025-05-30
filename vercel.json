@@ -2,31 +2,31 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/about",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/skills",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/projects",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/experience",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/education",
-      "dest": "/"
+      "dest": "/client/index.html"
     },
     {
       "src": "/contact",
-      "dest": "/"
+      "dest": "/client/index.html"
     }
   ]
 }
